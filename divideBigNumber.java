@@ -1,14 +1,22 @@
+package divideBigNumber;
+
 import java.math.BigInteger;
+
 public class divideBigNumber{
 	public static void main( String... numbers ){
 		try{
-			BigInteger number = new BigInteger( numbers[ 0 ] );
-			for( int index = 1; index < numbers.length; index++ ){
-				number = number.divide( new BigInteger( numbers[ index ] ) );	
-			}
-			System.out.print( number.toString( ) );
+			BigInteger quotient = divideBigNumber( numbers );
+			System.out.print( quotient.toString( ) );
 		}catch( Exception exception ){
 			System.err.print( exception.getMessage( ) );
 		}
+	}
+
+	public static final BigInteger divideBigNumber( String... numbers ){
+		BigInteger quotient = new BigInteger( numbers[ 0 ] );
+		for( int index = 1; index < numbers.length; index++ ){
+			quotient = quotient.divide( new BigInteger( numbers[ index ] ) );	
+		}
+		return quotient;
 	}
 }
