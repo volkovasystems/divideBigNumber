@@ -3,9 +3,9 @@ package divideBigNumber;
 import java.math.BigInteger;
 
 public class divideBigNumber{
-	public static void main( String... numbers ){
+	public static void main( String... parameters ){
 		try{
-			BigInteger quotient = divideBigNumber( numbers );
+			BigInteger quotient = divideBigNumber( parameters );
 			System.out.print( quotient.toString( ) );
 		}catch( Exception exception ){
 			System.err.print( exception.getMessage( ) );
